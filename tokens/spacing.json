@@ -1,0 +1,43 @@
+{
+  "$meta": {
+    "nom": "ISI Design System — Espacement",
+    "version": "0.1.0",
+    "statut": "propose-a-valider",
+    "source": "Échelle construite d'après les pratiques de structuration observées à l'étape 2 : grille de base 4px, peu de pas, massivement réutilisés. Le site actuel de l'ISI n'a pas d'échelle d'espacement cohérente.",
+    "base": "4px",
+    "regle": "Toute marge ou tout remplissage doit être une valeur de cette échelle. Aucune valeur intermédiaire (10px, 15px, 25px…) ne doit être introduite."
+  },
+
+  "echelle": {
+    "space-xs": {
+      "valeur": "4px",
+      "rem": "0.25rem",
+      "usage": "Écart entre une icône et son libellé, respiration interne d'un badge."
+    },
+    "space-sm": {
+      "valeur": "8px",
+      "rem": "0.5rem",
+      "usage": "Écart entre deux éléments d'un même groupe, remplissage vertical d'un petit bouton."
+    },
+    "space-md": {
+      "valeur": "16px",
+      "rem": "1rem",
+      "usage": "Valeur par défaut : remplissage d'une carte, écart entre paragraphes, gouttière de grille."
+    },
+    "space-lg": {
+      "valeur": "24px",
+      "rem": "1.5rem",
+      "usage": "Écart entre deux blocs de contenu, remplissage d'une carte large."
+    },
+    "space-xl": {
+      "valeur": "32px",
+      "rem": "2rem",
+      "usage": "Écart entre deux groupes de contenu, marge sous un titre de section."
+    },
+    "space-xxl": {
+      "valeur": "48px",
+      "rem": "3rem",
+      "usage": "Respiration verticale entre deux sections de page."
+    }
+  }
+}

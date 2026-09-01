@@ -1,0 +1,105 @@
+{
+  "$meta": {
+    "nom": "ISI Design System — Couleurs",
+    "version": "0.1.0",
+    "statut": "derive-du-site-officiel-a-valider",
+    "source": "https://www.groupeisi.com/ (relevé du 2026-09-01) + analyse des pixels du logo officiel",
+    "note": "Chaque couleur porte son niveau de confiance. Toute couleur non confirmée vaut \"a-verifier\" et n'a pas été inventée. Les propositions accessibles sont isolées dans le champ \"proposition\" et ne font pas partie de la charte tant qu'elles ne sont pas validées."
+  },
+
+  "marque": {
+    "primaire": {
+      "valeur": "#041F4E",
+      "nom": "Bleu marine ISI",
+      "confiance": "haute",
+      "source": "Couleur exacte dominante non-blanche du logo officiel (13 % des pixels) ET couleur du fond des boutons, des titres (!important), du dégradé de la section d'accueil et des ombres dans le CSS du site.",
+      "usages": ["titres", "boutons d'action", "fonds de section sombres", "logo"],
+      "contraste-sur-blanc": "16.02:1 — conforme WCAG AAA"
+    },
+    "secondaire": {
+      "valeur": "#1D4E79",
+      "nom": "Bleu ISI moyen",
+      "confiance": "moyenne",
+      "source": "Deuxième couleur du logo officiel (dégradé / relief), 1,9 % des pixels. Non déclarée explicitement dans le CSS du site.",
+      "usages": ["aplats secondaires", "états survol de la couleur primaire", "illustrations"],
+      "contraste-sur-blanc": "8.68:1 — conforme WCAG AAA",
+      "a-confirmer": "Faire confirmer par la direction de la communication qu'il s'agit bien d'une couleur de charte et non d'un simple effet de dégradé du logo."
+    },
+    "accent": {
+      "valeur": "#0C71C3",
+      "nom": "Bleu ISI vif",
+      "confiance": "moyenne",
+      "source": "Couleur imposée aux titres H1 des modules texte de la page d'accueil (font-size:39px; color:#0C71C3!important). Appartient à la palette par défaut du thème Divi mais appliquée volontairement.",
+      "usages": ["liens", "éléments de mise en avant", "pictogrammes"],
+      "contraste-sur-blanc": "5.04:1 — conforme WCAG AA pour le texte courant, insuffisant pour du texte fin sur fond coloré",
+      "a-confirmer": "Vérifier que ce bleu est un choix de charte et non un reliquat de la palette par défaut du thème."
+    },
+    "ecartees": {
+      "note": "Couleurs présentes sur le site mais volontairement exclues du Design System.",
+      "#2EA3F2": "Valeur par défaut du thème Divi (liens et barre supérieure), jamais choisie par l'ISI.",
+      "#1863DC": "Couleur par défaut du plugin de bandeau cookies.",
+      "#001D39 / #985E23": "Couleurs d'un logo tiers embarqué en SVG dans la page.",
+      "#00D084 / #CF2E2E / #FCB900": "Palette par défaut de l'éditeur WordPress, non employée dans les pages."
+    }
+  },
+
+  "neutres": {
+    "fond-clair": {
+      "valeur": "#FFFFFF",
+      "confiance": "haute",
+      "source": "background-color du body sur le site."
+    },
+    "fond-clair-alt": {
+      "valeur": "#EFEEF3",
+      "confiance": "haute",
+      "source": "Fond des sections alternées de la page d'accueil."
+    },
+    "fond-sombre": {
+      "valeur": "#041F4E",
+      "confiance": "haute",
+      "source": "Le bleu primaire sert de fond sombre (dégradé de la section d'accueil). Aucun autre fond sombre n'existe sur le site."
+    },
+    "texte-principal": {
+      "valeur": "#333333",
+      "confiance": "haute",
+      "source": "Règle h1,h2,h3,h4,h5,h6 { color:#333 } du site.",
+      "contraste-sur-blanc": "12.63:1 — conforme WCAG AAA"
+    },
+    "texte-secondaire": {
+      "valeur": "#666666",
+      "confiance": "haute",
+      "source": "Règle body { color:#666 } du site.",
+      "contraste-sur-blanc": "5.74:1 — conforme WCAG AA"
+    },
+    "bordure": {
+      "valeur": "#E8E8E8",
+      "confiance": "moyenne",
+      "source": "Valeur de bordure la plus fréquente dans le CSS du site (#E8E8E8, devant #DDDDDD et #EEEEEE)."
+    }
+  },
+
+  "etats": {
+    "note": "Aucune couleur d'état n'a pu être identifiée sur le site de l'ISI : il n'y a ni message de succès, ni alerte, ni formulaire stylé dans les pages analysées. Ces valeurs restent donc \"a-verifier\". Les champs \"proposition\" sont des suggestions accessibles (contraste ≥ 4.5:1 sur fond blanc), à valider en atelier — elles ne sont pas issues de la charte ISI.",
+    "succes": {
+      "valeur": "a-verifier",
+      "proposition": "#1E7B45",
+      "usages": ["confirmation d'inscription", "validation de formulaire"]
+    },
+    "erreur": {
+      "valeur": "a-verifier",
+      "proposition": "#B3261E",
+      "usages": ["champ invalide", "message d'échec"]
+    },
+    "avertissement": {
+      "valeur": "a-verifier",
+      "proposition": "#9A6700",
+      "usages": ["délai proche", "information à confirmer"]
+    },
+    "information": {
+      "valeur": "a-verifier",
+      "proposition": "#0C71C3",
+      "note-proposition": "Reprend l'accent de marque afin d'éviter d'introduire un bleu supplémentaire.",
+      "usages": ["message neutre", "aide contextuelle"]
+    }
+  }
+}
