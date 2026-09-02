@@ -1,0 +1,15 @@
+{
+  "$meta": {
+    "nom": "ISI Design System — Élévation",
+    "version": "0.2.0",
+    "statut": "propose-a-valider",
+    "source": "Repris du jeu de tokens ISI antérieur. Les ombres sont teintées en bleu ISI plutôt qu'en noir pur, ce qui est cohérent avec le box-shadow #041F4E relevé sur les images du site officiel.",
+    "regle": "Une seule élévation par niveau d'interface. Ne pas empiler les ombres pour créer de la hiérarchie : utiliser l'espacement."
+  },
+  "echelle": {
+    "elevation-xs": { "valeur": "0 1px 2px rgba(10,30,70,.06)", "usage": "séparation discrète, étiquettes" },
+    "elevation-sm": { "valeur": "0 1px 2px rgba(10,30,70,.07), 0 4px 10px rgba(10,30,70,.06)", "usage": "cartes au repos" },
+    "elevation-md": { "valeur": "0 2px 4px rgba(10,30,70,.08), 0 12px 28px rgba(10,30,70,.09)", "usage": "cartes au survol, menus déroulants" },
+    "elevation-lg": { "valeur": "0 8px 16px rgba(10,30,70,.10), 0 24px 48px rgba(10,30,70,.14)", "usage": "fenêtres modales, panneaux flottants" }
+  }
+}

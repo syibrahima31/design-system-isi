@@ -1,16 +1,20 @@
 {
   "$meta": {
     "nom": "ISI Design System — Couleurs",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "statut": "derive-du-site-officiel-a-valider",
-    "source": "https://www.groupeisi.com/ (relevé du 2026-09-01) + analyse des pixels du logo officiel",
-    "note": "Chaque couleur porte son niveau de confiance. Toute couleur non confirmée vaut \"a-verifier\" et n'a pas été inventée. Les propositions accessibles sont isolées dans le champ \"proposition\" et ne font pas partie de la charte tant qu'elles ne sont pas validées."
+    "sources": [
+      "https://www.groupeisi.com/ (relevé du 2026-09-01) — code source, feuilles de style",
+      "Analyse des pixels du logo officiel",
+      "Jeu de tokens ISI antérieur (Desktop/Seminaire ISI IA/Design System/isi-design-tokens.md), réconcilié le 2026-09-02"
+    ],
+    "note": "Chaque couleur porte son niveau de confiance et sa source. Les arbitrages sont motivés dans decisions.md. Les couleurs d'identité (marque) restent à valider par la direction ; les couleurs fonctionnelles (états) ont été tranchées car elles ne portent pas d'identité."
   },
 
   "marque": {
     "primaire": {
       "valeur": "#041F4E",
-      "nom": "Bleu marine ISI",
+      "nom": "Bleu Nuit ISI",
       "confiance": "haute",
       "source": "Couleur exacte dominante non-blanche du logo officiel (13 % des pixels) ET couleur du fond des boutons, des titres (!important), du dégradé de la section d'accueil et des ombres dans le CSS du site.",
       "usages": ["titres", "boutons d'action", "fonds de section sombres", "logo"],
@@ -35,9 +39,10 @@
       "a-confirmer": "Vérifier que ce bleu est un choix de charte et non un reliquat de la palette par défaut du thème."
     },
     "ecartees": {
-      "note": "Couleurs présentes sur le site mais volontairement exclues du Design System.",
-      "#2EA3F2": "Valeur par défaut du thème Divi (liens et barre supérieure), jamais choisie par l'ISI.",
-      "#1863DC": "Couleur par défaut du plugin de bandeau cookies.",
+      "note": "Couleurs présentes sur le site ou proposées ailleurs, mais volontairement exclues du Design System. Voir decisions.md, décision D1.",
+      "#2EA3F2": "Valeur par défaut du thème Divi (liens et barre supérieure), jamais choisie par l'ISI. Contraste 2.75:1 sur blanc : inutilisable pour du texte ou un élément d'interface.",
+      "#1863DC": "Couleur par défaut du plugin de bandeau cookies. Retenue comme accent dans le jeu de tokens antérieur : écartée ici, la provenance ne tient pas.",
+      "#F0B429": "Or proposé dans le jeu de tokens antérieur. Aucune trace sur le site officiel et contraste 1.86:1 sur blanc. Écartée faute de source.",
       "#001D39 / #985E23": "Couleurs d'un logo tiers embarqué en SVG dans la page.",
       "#00D084 / #CF2E2E / #FCB900": "Palette par défaut de l'éditeur WordPress, non employée dans les pages."
     }
@@ -79,27 +84,37 @@
   },
 
   "etats": {
-    "note": "Aucune couleur d'état n'a pu être identifiée sur le site de l'ISI : il n'y a ni message de succès, ni alerte, ni formulaire stylé dans les pages analysées. Ces valeurs restent donc \"a-verifier\". Les champs \"proposition\" sont des suggestions accessibles (contraste ≥ 4.5:1 sur fond blanc), à valider en atelier — elles ne sont pas issues de la charte ISI.",
+    "$note": "Tranchés le 2026-09-02 (decisions.md, décision D2). Ces couleurs sont fonctionnelles et non identitaires : elles n'engagent pas la charte de l'ISI et ne bloquent donc pas la production. Chaque état est un triplet texte / fond / bordure. Tous les rapports texte-sur-fond ont été calculés et sont conformes WCAG AA.",
+    "confiance": "moyenne — fonctionnel, non identitaire",
     "succes": {
-      "valeur": "a-verifier",
-      "proposition": "#1E7B45",
+      "texte": "#15803D",
+      "fond": "#ECFDF3",
+      "bordure": "#B7E4C7",
+      "contraste-texte-sur-fond": "4.76:1 — conforme WCAG AA",
       "usages": ["confirmation d'inscription", "validation de formulaire"]
     },
     "erreur": {
-      "valeur": "a-verifier",
-      "proposition": "#B3261E",
-      "usages": ["champ invalide", "message d'échec"]
+      "texte": "#B3261E",
+      "fond": "#FEF2F2",
+      "bordure": "#F5C2C0",
+      "contraste-texte-sur-fond": "5.98:1 — conforme WCAG AA",
+      "usages": ["champ invalide", "message d'échec"],
+      "note": "Le jeu de tokens antérieur proposait #DC2626, qui ne donne que 4.41:1 sur son propre fond et échoue donc WCAG AA. Corrigé ici."
     },
     "avertissement": {
-      "valeur": "a-verifier",
-      "proposition": "#9A6700",
+      "texte": "#92400E",
+      "fond": "#FEF3C7",
+      "bordure": "#F3DE9A",
+      "contraste-texte-sur-fond": "6.37:1 — conforme WCAG AA",
       "usages": ["délai proche", "information à confirmer"]
     },
     "information": {
-      "valeur": "a-verifier",
-      "proposition": "#0C71C3",
-      "note-proposition": "Reprend l'accent de marque afin d'éviter d'introduire un bleu supplémentaire.",
-      "usages": ["message neutre", "aide contextuelle"]
+      "texte": "#124AA6",
+      "fond": "#EDF3FD",
+      "bordure": "#C7DAF7",
+      "contraste-texte-sur-fond": "7.37:1 — conforme WCAG AA",
+      "usages": ["message neutre", "aide contextuelle"],
+      "note": "Bleu foncé volontairement proche de la famille ISI, pour ne pas introduire une teinte étrangère à la marque."
     }
   }
 }

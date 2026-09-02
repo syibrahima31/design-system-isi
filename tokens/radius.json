@@ -1,0 +1,15 @@
+{
+  "$meta": {
+    "nom": "ISI Design System — Rayons de bordure",
+    "version": "0.2.0",
+    "statut": "propose-a-valider",
+    "source": "Le seul rayon relevé sur groupeisi.com est 6px (bouton principal). L'échelle complète est reprise du jeu de tokens ISI antérieur, avec un arbitrage sur le bouton (decisions.md, décision D8)."
+  },
+  "echelle": {
+    "radius-sm": { "valeur": "6px", "usage": "champs de formulaire, étiquettes, petits éléments" },
+    "radius-md": { "valeur": "6px", "usage": "boutons", "note": "Le jeu antérieur proposait 10px. Valeur ramenée à 6px, qui est celle réellement relevée sur les boutons du site officiel." },
+    "radius-lg": { "valeur": "16px", "usage": "cartes" },
+    "radius-xl": { "valeur": "22px", "usage": "grands panneaux", "note": "Corrobore le border-radius de 22px relevé sur les images de la page d'accueil." },
+    "radius-full": { "valeur": "999px", "usage": "pastilles, avatars, badges arrondis" }
+  }
+}
